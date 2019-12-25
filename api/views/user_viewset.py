@@ -18,6 +18,7 @@ class ListUsers(APIView):
         """
         Return a list of all users.
         """
+
         users = User.objects.all()
         users_serializer = UserSerializer(users, many=True)
 
